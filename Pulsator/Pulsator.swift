@@ -189,7 +189,7 @@ public class Pulsator: CAReplicatorLayer {
     
     /// Start the animation.
     public func start() {
-        if pulse.superlayer != nil {
+        if pulse.animationKeys()?.count > 0 {
             return
         }
         setupPulse()
