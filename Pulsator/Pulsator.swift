@@ -189,6 +189,9 @@ public class Pulsator: CAReplicatorLayer {
     
     /// Start the animation.
     public func start() {
+        if pulse.superlayer != nil {
+            return
+        }
         setupPulse()
         setupAnimateionGroup()
         pulse.addAnimation(animationGroup, forKey: kPulsatorAnimationKey)
