@@ -195,9 +195,6 @@ open class Pulsator: CAReplicatorLayer, CAAnimationDelegate {
     
     /// Start the animation.
     open func start() {
-        if isPulsating {
-            return
-        }
         setupPulse()
         setupAnimateionGroup()
         pulse.add(animationGroup, forKey: kPulsatorAnimationKey)
